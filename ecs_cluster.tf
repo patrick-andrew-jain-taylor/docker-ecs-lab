@@ -5,5 +5,5 @@ resource "aws_cloudformation_stack" "ecs_cluster" {
     AsgMaxSize = 2
     ECSAMI = "/aws/service/ecs/optimized-ami/amazon-linux/recommended/image_id"
   }
-  capabilities = ["CAPABILITY_IAM"]
+  capabilities = ["CAPABILITY_NAMED_IAM"]
 }
