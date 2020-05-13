@@ -3,7 +3,7 @@ resource "aws_ecs_service" "this" {
   task_definition = aws_ecs_task_definition.this.arn
   launch_type = "EC2"
   cluster = "default"
-  desired_count = 2
+  desired_count = 4
   health_check_grace_period_seconds = 10
 
   load_balancer {
