@@ -4,6 +4,7 @@ resource "aws_ecs_service" "this" {
   launch_type = "EC2"
   cluster = "default"
   desired_count = 1
+  health_check_grace_period_seconds = 10
 
   load_balancer {
     elb_name = "myLoadBalancer"
